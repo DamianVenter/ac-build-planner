@@ -10,7 +10,7 @@ import { heroes } from '../../core/hero-data.service';
 export class HeroesListComponent {
   todo = heroes;
 
-  done = [  ];
+  done = [];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
