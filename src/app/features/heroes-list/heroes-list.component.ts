@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { heroes } from '../../core/hero-data.service';
 
 @Component({
   selector: 'app-heroes-list',
@@ -7,20 +8,9 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   styleUrls: ['./heroes-list.component.css'],
 })
 export class HeroesListComponent {
-  todo = [
-    'Get to work',
-    'Pick up groceries',
-    'Go home',
-    'Fall asleep'
-  ];
+  todo = heroes;
 
-  done = [
-    'Get up',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
-  ];
+  done = [  ];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
